@@ -1,12 +1,4 @@
-const Pool = require('pg').Pool;
-
-const pool = new Pool({
-  user: 'dbuser',
-  host: 'localhost',
-  database: 'todoapp',
-  password: 'admin2021',
-  port: 5432
-});
+const { pool } = require("../../connection/pool")
 
 const createUser = (request, response) => {
   const { name, email } = request.body
